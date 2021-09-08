@@ -1,0 +1,188 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  Inventory Tweaks Coremod (InventoryTweaks-1.63.jar)
+  GACoreMod (Gregicality-1.12.2-0.23.jar)
+  LoadingPlugin (ResourceLoader-MC1.12.1-1.5.3.jar)
+  AppleCore (AppleCore-mc1.12.2-3.4.0.jar)
+  GTCELoadingPlugin (gregtech-1.12.2-1.17.0.764.jar)
+  CTMCorePlugin (CTM-MC1.12.2-1.0.2.31.jar)
+Contact their authors BEFORE contacting forge
+
+// Surprise! Haha. Well, this is awkward.
+
+Time: 9/8/21 3:03 PM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from MechTech (mechtech)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.brachy84.mechtech.utils.TorusBlock
+	at com.brachy84.mechtech.machines.multis.MetaTileEntityTeslaTower.<init>(MetaTileEntityTeslaTower.java:147)
+	at com.brachy84.mechtech.machines.MTTileEntities.init(MTTileEntities.java:23)
+	at com.brachy84.mechtech.MechTech.preInit(MechTech.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:637)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.preinitializeMods(Loader.java:629)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:252)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:467)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:378)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:210)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:245)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_261, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 223391288 bytes (213 MB) / 607264768 bytes (579 MB) up to 6229393408 bytes (5940 MB)
+	JVM Flags: 25 total; -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+UseNUMA -XX:+CMSParallelRemarkEnabled -XX:MaxTenuringThreshold=15 -XX:MaxGCPauseMillis=30 -XX:GCPauseIntervalMillis=150 -XX:+UseAdaptiveGCBoundary -XX:-UseGCOverheadLimit -XX:+UseBiasedLocking -XX:SurvivorRatio=8 -XX:TargetSurvivorRatio=90 -XX:MaxTenuringThreshold=15 -XX:+UseFastAccessorMethods -XX:+UseCompressedOops -XX:+OptimizeStringConcat -XX:+AggressiveOpts -XX:ReservedCodeCacheSize=2048m -XX:+UseCodeCacheFlushing -XX:SoftRefLRUPolicyMSPerMB=10000 -XX:ParallelGCThreads=10 -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms512m -Xmx6024m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2855 51 mods loaded, 51 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                  | Version                  | Source                                        | Signature                                |
+	|:----- |:------------------- |:------------------------ |:--------------------------------------------- |:---------------------------------------- |
+	| LCH   | minecraft           | 1.12.2                   | minecraft.jar                                 | None                                     |
+	| LCH   | mcp                 | 9.42                     | minecraft.jar                                 | None                                     |
+	| LCH   | FML                 | 8.0.99.99                | forge-1.12.2-14.23.5.2855-universal.jar       | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCH   | forge               | 14.23.5.2855             | forge-1.12.2-14.23.5.2855-universal.jar       | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCH   | applecore           | 3.4.0                    | AppleCore-mc1.12.2-3.4.0.jar                  | None                                     |
+	| LCH   | crafttweaker        | 4.1.20                   | CraftTweaker2-1.12-4.1.20.660.jar             | None                                     |
+	| LCH   | mtlib               | 3.0.7                    | MTLib-3.0.7.jar                               | None                                     |
+	| LCH   | modtweaker          | 4.0.19                   | modtweaker-4.0.20.4.jar                       | None                                     |
+	| LCH   | jei                 | 4.16.1.301               | jei_1.12.2-4.16.1.301.jar                     | None                                     |
+	| LCH   | base                | 3.14.0                   | base-1.12.2-3.14.0.jar                        | None                                     |
+	| LCH   | baubles             | 1.5.2                    | Baubles-1.12-1.5.2.jar                        | None                                     |
+	| LCH   | bdlib               | 1.14.3.12                | bdlib-1.14.3.12-mc1.12.2.jar                  | None                                     |
+	| LCH   | forestry            | 5.8.2.387                | forestry_1.12.2-5.8.2.387.jar                 | None                                     |
+	| LCH   | binniecore          | 2.5.1.203                | binnie-mods-1.12.2-2.5.1.203.jar              | None                                     |
+	| LCH   | binniedesign        | 2.5.1.203                | binnie-mods-1.12.2-2.5.1.203.jar              | None                                     |
+	| LCH   | genetics            | 2.5.1.203                | binnie-mods-1.12.2-2.5.1.203.jar              | None                                     |
+	| LCH   | botany              | 2.5.1.203                | binnie-mods-1.12.2-2.5.1.203.jar              | None                                     |
+	| LCH   | extrabees           | 2.5.1.203                | binnie-mods-1.12.2-2.5.1.203.jar              | None                                     |
+	| LCH   | extratrees          | 2.5.1.203                | binnie-mods-1.12.2-2.5.1.203.jar              | None                                     |
+	| LCH   | blockdrops          | 1.4.0                    | blockdrops-1.12.2-1.4.0.jar                   | None                                     |
+	| LCH   | codechickenlib      | 3.2.3.358                | CodeChickenLib-1.12.2-3.2.3.358-universal.jar | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCH   | redstoneflux        | 2.1.1                    | RedstoneFlux-1.12-2.1.1.1-universal.jar       | None                                     |
+	| LCH   | cofhcore            | 4.6.6                    | CoFHCore-1.12.2-4.6.6.1-universal.jar         | None                                     |
+	| LCH   | contenttweaker      | 1.12.2-4.9.1             | ContentTweaker-1.12.2-4.9.1.jar               | None                                     |
+	| LCH   | controlling         | 3.0.10                   | Controlling-3.0.10.jar                        | None                                     |
+	| LCH   | ctgui               | 1.0.0                    | CraftTweaker2-1.12-4.1.20.660.jar             | None                                     |
+	| LCH   | crafttweakerjei     | 2.0.3                    | CraftTweaker2-1.12-4.1.20.660.jar             | None                                     |
+	| LCH   | ctm                 | MC1.12.2-1.0.2.31        | CTM-MC1.12.2-1.0.2.31.jar                     | None                                     |
+	| LCH   | devtech             | 1.0                      | devtech-1.2.3.jar                             | None                                     |
+	| LCH   | externaltweaker     | 0.3                      | externaltweaker-1.12-0.3.jar                  | None                                     |
+	| LCH   | fastleafdecay       | v14                      | FastLeafDecay-v14.jar                         | None                                     |
+	| LCH   | foodtweaker         | 1.1.3                    | FoodTweaker-1.1.3.jar                         | None                                     |
+	| LCH   | ftblib              | 5.4.7.2                  | FTBLib-5.4.7.2.jar                            | None                                     |
+	| LCH   | ftbutilities        | 5.4.1.131                | FTBUtilities-5.4.1.131.jar                    | None                                     |
+	| LCH   | gendustry           | 1.6.5.8                  | gendustry-1.6.5.8-mc1.12.2.jar                | None                                     |
+	| LCH   | gregtech            | 1.17.0.764               | gregtech-1.12.2-1.17.0.764.jar                | None                                     |
+	| LCH   | gtadditions         | 0.23                     | Gregicality-1.12.2-0.23.jar                   | None                                     |
+	| LCH   | gregicalityoreaddon | @1.12@                   | GregicalityOreAddon-1.12.2-0.1.1.jar          | None                                     |
+	| LCH   | gregtechfoodoption  | 1.12.2-0.10.3            | GregTech+Food+Option-1.12.2-0.10.3.jar        | None                                     |
+	| LCH   | initialinventory    | 2.0.2                    | InitialInventory-3.0.0.jar                    | None                                     |
+	| LCH   | inventorytweaks     | 1.63+release.109.220f184 | InventoryTweaks-1.63.jar                      | 55d2cd4f5f0961410bf7b91ef6c6bf00a766dcbe |
+	| LCH   | jeibees             | 0.9.0.5                  | jeibees-0.9.0.5-mc1.12.2.jar                  | None                                     |
+	| LCH   | jeiintegration      | 1.6.0                    | jeiintegration_1.12.2-1.6.0.jar               | None                                     |
+	| LCH   | magicbees           | 1.0                      | MagicBees-1.12.2-3.1.10.jar                   | None                                     |
+	| LCE   | mechtech            | 0.0.3                    | mechtech-0.1.1.jar                            | None                                     |
+	| LC    | mousetweaks         | 2.10                     | MouseTweaks-2.10-mc1.12.2.jar                 | None                                     |
+	| LC    | multiblocktweaker   | 1.12.2-stable-1.6.0      | multiblocktweaker-1.12.2-stable-1.6.0.jar     | None                                     |
+	| LC    | oreexcavation       | 1.4.137                  | OreExcavation-1.4.137.jar                     | None                                     |
+	| LC    | resourceloader      | 1.5.3                    | ResourceLoader-MC1.12.1-1.5.3.jar             | d72e0dd57935b3e9476212aea0c0df352dd76291 |
+	| LC    | theoneprobe         | 1.4.28                   | theoneprobe-1.12-1.4.28.jar                   | None                                     |
+	| LC    | topaddons           | 1.12.2-1.13.0            | topaddons-1.12.2-1.13.0.jar                   | None                                     |
+
+	Loaded coremods (and transformers): 
+Inventory Tweaks Coremod (InventoryTweaks-1.63.jar)
+  invtweaks.forge.asm.ContainerTransformer
+GACoreMod (Gregicality-1.12.2-0.23.jar)
+  gregicadditions.coremod.GAClassTransformer
+LoadingPlugin (ResourceLoader-MC1.12.1-1.5.3.jar)
+  lumien.resourceloader.asm.ClassTransformer
+AppleCore (AppleCore-mc1.12.2-3.4.0.jar)
+  squeek.applecore.asm.TransformerModuleHandler
+GTCELoadingPlugin (gregtech-1.12.2-1.17.0.764.jar)
+  gregtech.common.asm.GTCETransformer
+CTMCorePlugin (CTM-MC1.12.2-1.0.2.31.jar)
+  team.chisel.ctm.client.asm.CTMTransformer
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 456.71' Renderer: 'GeForce GTX 1050 Ti/PCIe/SSE2'
+	List of loaded APIs: 
+		* AppleCoreAPI (3.4.0) from AppleCore-mc1.12.2-3.4.0.jar
+		* Base|API (1.0.0) from base-1.12.2-3.14.0.jar
+		* Baubles|API (1.4.0.2) from Baubles-1.12-1.5.2.jar
+		* cofhapi (2.5.0) from CoFHCore-1.12.2-4.6.6.1-universal.jar
+		* ctm-api (0.1.0) from CTM-MC1.12.2-1.0.2.31.jar
+		* ctm-api-events (0.1.0) from CTM-MC1.12.2-1.0.2.31.jar
+		* ctm-api-models (0.1.0) from CTM-MC1.12.2-1.0.2.31.jar
+		* ctm-api-textures (0.1.0) from CTM-MC1.12.2-1.0.2.31.jar
+		* ctm-api-utils (0.1.0) from CTM-MC1.12.2-1.0.2.31.jar
+		* ForestryAPI|apiculture (5.0.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|arboriculture (4.3.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|book (5.8.1) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|circuits (3.1.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|climate (5.0.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|core (5.7.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|farming (5.8.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|food (1.1.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|fuels (3.0.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|genetics (5.7.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|gui (5.8.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|hives (4.1.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|lepidopterology (1.4.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|mail (3.1.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|modules (5.7.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|multiblock (3.0.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|recipes (5.4.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|storage (5.0.0) from forestry_1.12.2-5.8.2.387.jar
+		* ForestryAPI|world (2.1.0) from forestry_1.12.2-5.8.2.387.jar
+		* gendustryAPI (2.3.0) from gendustry-1.6.5.8-mc1.12.2.jar
+		* JustEnoughItemsAPI (4.13.0) from jei_1.12.2-4.16.1.301.jar
+		* MouseTweaks|API (1.0) from MouseTweaks-2.10-mc1.12.2.jar
+		* redstonefluxapi (2.1.1) from RedstoneFlux-1.12-2.1.1.1-universal.jar
+		* theoneprobe_api (1.4.4) from theoneprobe-1.12-1.4.28.jar
