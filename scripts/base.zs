@@ -1,3 +1,9 @@
-//mods.initialinventory.InvHandler.addStartingItem(String key, IItemStack item, Optional int index);
-mods.initialinventory.InvHandler.addStartingItem("apples", <item:minecraft:apple>);
-mods.initialinventory.InvHandler.addStartingItem("apples", <item:minecraft:golden_apple>, 5);
+//for debug
+import mods.jei.JEI;
+
+//FUll max battery
+val full_max_batt = <gtadditions:ga_meta_item:32124>.withTag({Charge: 8999999999996715308 as long, DischargeMode: 1 as byte});
+
+//TODO: remove this at the end!
+recipes.addShapeless(full_max_batt, [<ore:dirt>]);
+JEI.addItem(full_max_batt);
