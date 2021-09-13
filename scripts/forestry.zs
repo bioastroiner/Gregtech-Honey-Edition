@@ -45,6 +45,7 @@ for r in forestryToRemove{
 
 #Apatit can come from bees
 recipes.addShapeless(<gregtech:meta_item_1:8226>, [<forestry:apatite>]);
+recipes.addShapeless(<gregtech:meta_item_1:2089>, [<forestry:ash>]);
 
 #fix dust/pulp wood nonsense
 <ore:pulpWood>.remove(<forestry:wood_pulp>);
@@ -84,6 +85,7 @@ for crate,item in allCrates{
     Carpenter.addRecipe(crate,[[item,item,item],[item,item,item],[item,item,item]],10,<liquid:water> * 100,<forestry:crate>);
     Carpenter.addRecipe(item * 9,[null,[null,crate,null],null],10);
 }
+
 
 // These are covered by GT meta tools
 recipes.remove(<forestry:bronze_pickaxe>);

@@ -1,3 +1,14 @@
-gendustry.bees.species.Primal=Primal
-gendustry.bees.species.Primal.description=Named after the Matron Mother of House Irae.
-gendustry.honeycomb.Gravel.name=Gravel Comb
+gendustry.bees.species.Primal=Primo Pebblio
+gendustry.bees.species.Primal.description=Flint Flint Flint! Tier: 0
+
+gendustry.bees.species.Lignin=Lignino Sachorous
+gendustry.bees.species.Lignin.description=Extract Polymeric Lignins from the fabric of ArchaePlastians Themselves! Tier: 0
+
+gendustry.bees.species.Tissue=Tissue Farmer
+gendustry.bees.species.Tissue.description=No Animal Life is safe from this insect, Harvest and Farm Strong Tissue Proteins such as Actin & ! Tier: 0
+
+gendustry.bees.species.Honey=G.M.O Bee 
+gendustry.bees.species.Honey.description=Makes more honey! Tier: 0
+
+gendustry.honeycomb.gravel.name=Gravel Comb
+gendustry.honeycomb.sneed.name=deez nuts
